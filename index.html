@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      <!--
+        TODO:
+          - Make this look pretty with Ecotrust styles
+          - Hide the empty invitation template initially
+          - Show the invitation and hide the form on submit
+      -->
+
+    </style>
+  </head>
+  <body>
+    <h1>Generate an invitation:</h1>
+    <form id="guesthostrequestform">
+      Guest Gender:
+        <select name="guestgender">
+          <option value="any">Any</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+      <br>
+        Guest Nationality:
+        <select name="guestnationality">
+          <option value="any">Any</option>
+          <option value="au">AU</option>
+          <option value="br">BR</option>
+          <option value="ca">CA</option>
+          <option value="ch">CH</option>
+          <option value="de">DE</option>
+          <option value="dk">DK</option>
+          <option value="es">ES</option>
+          <option value="fi">FI</option>
+          <option value="fr">FR</option>
+          <option value="gb">GB</option>
+          <option value="ie">IE</option>
+          <option value="ir">IR</option>
+          <option value="nl">NL</option>
+          <option value="nz">NZ</option>
+          <option value="tr">TR</option>
+          <option value="us">US</option>
+        </select>
+      <br>
+      Host Gender:
+        <select name="hostgender">
+          <option value="any">Any</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+      <br>
+        Host Nationality:
+        <select name="hostnationality">
+          <option value="any">Any</option>
+          <option value="au">AU</option>
+          <option value="br">BR</option>
+          <option value="ca">CA</option>
+          <option value="ch">CH</option>
+          <option value="de">DE</option>
+          <option value="dk">DK</option>
+          <option value="es">ES</option>
+          <option value="fi">FI</option>
+          <option value="fr">FR</option>
+          <option value="gb">GB</option>
+          <option value="ie">IE</option>
+          <option value="ir">IR</option>
+          <option value="nl">NL</option>
+          <option value="nz">NZ</option>
+          <option value="tr">TR</option>
+          <option value="us">US</option>
+        </select>
+      <br>
+      <input type="submit" value="submit">
+    </form>
+
+    <div class="invitation">
+        Dear [guest name],
+
+        On Wednesday, July 20, Ecotrust is hosting the Chicken & Egg Food Forum: Taking steps to scale sustainable meat. I hope you’ll join me.
+
+        Joining us to discuss these issues will be our panelists, followed by a Q&A. Immediately afterward, we are hosting a social hour, where panelists and attendees can connect and take the conversation into deeper waters.
+
+        Chicken & Egg
+        5:30-8:30, Wednesday, July 20
+        [host address]
+
+        This event is the second in our Food Forums series, where Ecotrust is bringing together engaged food leaders from diverse sectors to dig into important food systems issues. We want to dig into the system changes we need to work toward a healthier food landscape that feeds all eaters, benefits the environment, and improves our economy.
+
+        I would love to have you join me.
+
+        Warmly,
+        [host name]
+    </div>
+
+  </body>
+  <!-- jQuery 2.2.4 included for your convenience. You do not need to use this version, or any jQuery if you don't want. -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script>
+      /*
+        TODO:
+        - Use form data to populate the API request to https://randomuser.me/api/
+          - Details on how to use the api can be found here: https://randomuser.me/documentation
+        - Use the submit button to generate the AJAX requests (one for guest, one for host) and autofill the template with random user details on successful response.
+      */
+  </script>
+</html>
