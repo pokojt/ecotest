@@ -1,0 +1,3 @@
+change .ajax to .get and added .then promise to make up for asynchonous response
+
+update html option values to capitals to match API response

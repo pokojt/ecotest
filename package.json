@@ -1,0 +1,30 @@
+{
+  "name": "ecotest-pokoj",
+  "version": "1.0.0",
+  "description": "In this coding challenge you will be asked to demonstrate the following capacities: * HTML * CSS * AJAX * Dynamic content * Style/Design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ecotrust/ecotest-pokoj.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ecotrust/ecotest-pokoj/issues"
+  },
+  "homepage": "https://github.com/Ecotrust/ecotest-pokoj#readme",
+  "devDependencies": {
+    "bower-files": "^3.13.3",
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.0.1",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-util": "^3.0.7",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

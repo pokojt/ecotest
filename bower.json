@@ -1,0 +1,20 @@
+{
+  "name": "ecotest-pokoj",
+  "description": "In this coding challenge you will be asked to demonstrate the following capacities: * HTML * CSS * AJAX * Dynamic content * Style/Design",
+  "main": "index.js",
+  "authors": [
+    "Taylor Pokoj <pokojt@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Ecotrust/ecotest-pokoj",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}

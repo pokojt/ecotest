@@ -13,100 +13,96 @@
     </style>
     <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
   </head>
+
+
   <body>
     <div class="pageWrapper">
       <form id="guesthostrequestform">
       <h1>Generate an invitation:</h1>
         Guest Gender:
-          <select name="guestgender">
+          <select class="guestgender" name="guestgender">
             <option value="any">Any</option>
             <option value="female">Female</option>
             <option value="male">Male</option>
           </select>
         <br>
           Guest Nationality:
-          <select name="guestnationality">
+          <select class="guestnationality" name="guestnationality">
             <option value="any">Any</option>
-            <option value="au">AU</option>
-            <option value="br">BR</option>
-            <option value="ca">CA</option>
-            <option value="ch">CH</option>
-            <option value="de">DE</option>
-            <option value="dk">DK</option>
-            <option value="es">ES</option>
-            <option value="fi">FI</option>
-            <option value="fr">FR</option>
-            <option value="gb">GB</option>
-            <option value="ie">IE</option>
-            <option value="ir">IR</option>
-            <option value="nl">NL</option>
-            <option value="nz">NZ</option>
-            <option value="tr">TR</option>
-            <option value="us">US</option>
+            <option value="AU">AU</option>
+            <option value="BR">BR</option>
+            <option value="CA">CA</option>
+            <option value="CH">CH</option>
+            <option value="DE">DE</option>
+            <option value="DL">DK</option>
+            <option value="ES">ES</option>
+            <option value="FI">FI</option>
+            <option value="FR">FR</option>
+            <option value="GB">GB</option>
+            <option value="IE">IE</option>
+            <option value="IR">IR</option>
+            <option value="NL">NL</option>
+            <option value="NZ">NZ</option>
+            <option value="TR">TR</option>
+            <option value="US">US</option>
           </select>
         <br>
         Host Gender:
-          <select name="hostgender">
+          <select class="hostgender" name="hostgender">
             <option value="any">Any</option>
             <option value="female">Female</option>
             <option value="male">Male</option>
           </select>
         <br>
           Host Nationality:
-          <select name="hostnationality">
+          <select class="hostnationality" name="hostnationality">
             <option value="any">Any</option>
-            <option value="au">AU</option>
-            <option value="br">BR</option>
-            <option value="ca">CA</option>
-            <option value="ch">CH</option>
-            <option value="de">DE</option>
-            <option value="dk">DK</option>
-            <option value="es">ES</option>
-            <option value="fi">FI</option>
-            <option value="fr">FR</option>
-            <option value="gb">GB</option>
-            <option value="ie">IE</option>
-            <option value="ir">IR</option>
-            <option value="nl">NL</option>
-            <option value="nz">NZ</option>
-            <option value="tr">TR</option>
-            <option value="us">US</option>
+            <option value="AU">AU</option>
+            <option value="BR">BR</option>
+            <option value="CA">CA</option>
+            <option value="CH">CH</option>
+            <option value="DE">DE</option>
+            <option value="DK">DK</option>
+            <option value="ES">ES</option>
+            <option value="FI">FI</option>
+            <option value="FR">FR</option>
+            <option value="GB">GB</option>
+            <option value="IE">IE</option>
+            <option value="IR">IR</option>
+            <option value="NL">NL</option>
+            <option value="NZ">NZ</option>
+            <option value="TR">TR</option>
+            <option value="US">US</option>
           </select>
         <br>
         <button type="submit" id="submit">Submit</button>
 
       </form>
 
-      <div class="invitation">
-        <h1>Your Invitation</h1>
-          Dear [guest name],
+      <div class="results">
+        <div class="invitation">
+          <h1>Your Invitation</h1>
+            <p>Dear <span id="guestName"></span>,</p>
 
-          On Wednesday, July 20, Ecotrust is hosting the Chicken & Egg Food Forum: Taking steps to scale sustainable meat. I hope you’ll join me.
+          <p>On Wednesday, July 20, Ecotrust is hosting the Chicken & Egg Food Forum: Taking steps to scale sustainable meat. I hope you’ll join me.</p>
 
-          Joining us to discuss these issues will be our panelists, followed by a Q&A. Immediately afterward, we are hosting a social hour, where panelists and attendees can connect and take the conversation into deeper waters.
+          <p>Joining us to discuss these issues will be our panelists, followed by a Q&amp;A. Immediately afterward, we are hosting a social hour, where panelists and attendees can connect and take the conversation into deeper waters.</p>
 
-          Chicken & Egg
-          5:30-8:30, Wednesday, July 20
-          [host address]
+          <p>Chicken & Egg</p>
+          <p>5:30-8:30, Wednesday, July 20</p>
+          <p> <span id="hostAddress"></span></p>
 
-          This event is the second in our Food Forums series, where Ecotrust is bringing together engaged food leaders from diverse sectors to dig into important food systems issues. We want to dig into the system changes we need to work toward a healthier food landscape that feeds all eaters, benefits the environment, and improves our economy.
+          <p>This event is the second in our Food Forums series, where Ecotrust is bringing together engaged food leaders from diverse sectors to dig into important food systems issues. We want to dig into the system changes we need to work toward a healthier food landscape that feeds all eaters, benefits the environment, and improves our economy.</p>
 
-          I would love to have you join me.
+          <p>I would love to have you join me.</p>
 
-          Warmly,
-          [host name]
+          <p>Warmly,</p>
+          <p><span id="hostName"></span></p>
       </div>
+      </div>
+
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="js/scripts.js" type="text/javascript"></script>
-  <script>
-
-      /*
-        TODO:
-        - Use form data to populate the API request to https://randomuser.me/api/
-          - Details on how to use the api can be found here: https://randomuser.me/documentation
-        - Use the submit button to generate the AJAX requests (one for guest, one for host) and autofill the template with random user details on successful response.
-      */
-  </script>
+  <script src="build/js/app.js" type="text/javascript"></script>
 </html>
