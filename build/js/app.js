@@ -8,11 +8,10 @@ exports.Invitation = function(guestGender, guestNationality, hostGender, hostNat
 
 exports.Invitation.prototype.getGuest = function() {
   $.ajax({
-    url: "https://randomuser.me/api/?gender='+ this.guestGender+'&nat='+this.guestNationality+'",
+    url: "https://randomuser.me/api/?gender="+ this.guestGender+"&nat="+this.guestNationality,
     dataType: 'json',
     success: function(data){
       console.log(data);
-
       var guestFirstName = data.results[0].name.first;
       var guestLastName = data.results[0].name.last;
 
@@ -28,7 +27,7 @@ exports.Invitation.prototype.getGuest = function() {
 
 exports.Invitation.prototype.getHost = function() {
   $.ajax({
-    url: "https://randomuser.me/api/?gender='+ this.hostGender+'&nat='+this.hostNationality+'",
+    url: "https:randomuser.me/api/?gender="+ this.hostGender+"&nat="+this.hostNationality,
     dataType: 'json',
     success: function(data){
       console.log(data);
@@ -80,8 +79,13 @@ $(document).ready(function() {
 
       $("#guesthostrequestform").hide();
       $(".results").show();
+      $("#guesthostrequestform")[0].reset();
 
+  });
 
+  $("#clearResult").click(function() {
+    $(".results").hide();
+    $("#guesthostrequestform").show();
   });
 });
 

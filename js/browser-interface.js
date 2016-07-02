@@ -24,7 +24,12 @@ $(document).ready(function() {
 
       $("#guesthostrequestform").hide();
       $(".results").show();
+      $("#guesthostrequestform")[0].reset();
 
+  });
 
+  $("#clearResult").click(function() {
+    $(".results").hide();
+    $("#guesthostrequestform").show();
   });
 });
