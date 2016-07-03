@@ -1,4 +1,28 @@
 # Generate an invitation
+### by Taylor Pokoj
+
+## Techologies Used
+* Node.js
+* Gulp
+* Bower
+* SCSS
+
+## Installation
+
+### Using a Local Server
+1. Clone this repository.
+2. Be sure to have node.js installed on your machine.
+3. Within the project directory, run the following commands:
+* `$npm install` to install Node dependencies
+* `$bower install` to install all Bower dependencies
+* `$gulp serve` to start the local server
+
+### For Static Viewing
+All scripts have been minified, and the project is available for viewing statically.
+* Clone this repository.
+* Open index.html in the browser.
+
+## Challenge Instructions
 
 In this coding challenge you will be asked to demonstrate the following capacities:
 * HTML
