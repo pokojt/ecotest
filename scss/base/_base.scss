@@ -21,7 +21,7 @@ html, body {
   overflow: scroll;
   min-height: 100vh;
   @include flexbox($direction: column, $justify: center, $align: center);
-  background: linear-gradient(to right, rgba(255,255,255, 0.8),rgba(255,255,255,0.8)), url("/public/img/background.jpg");
+  background: linear-gradient(to right, rgba(255,255,255, 0.8),rgba(255,255,255,0.8)), url("../../public/img/background.jpg");
   background-position: fixed;
    background-size: cover;
 }
