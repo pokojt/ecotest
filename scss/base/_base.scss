@@ -13,14 +13,20 @@ body::-webkit-scrollbar {
 html, body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Josefin Sans";
+  // font-family: 'Quicksand';
   color: $darkgray;
 }
 
 .pageWrapper {
+  overflow: scroll;
   height: 100vh;
   @include flexbox($direction: column, $justify: center, $align: center);
   background: linear-gradient(to right, rgba(255,255,255, 0.8),rgba(255,255,255,0.8)), url("/media/img/background.jpg");
   background-position: fixed;
    background-size: cover;
+}
+
+.invited {
+  background: $darkgray !important;
 }

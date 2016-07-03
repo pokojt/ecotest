@@ -9,6 +9,8 @@ $(document).ready(function() {
   $("#submit").click(function() {
     event.preventDefault();
 
+    $(".pageWrapper").addClass("invited");
+
     var inputguestGender = $("select.guestgender").val();
     var inputguestNationality = $("select.guestnationality").val();
     var inputhostGender = $("select.hostgender").val();
@@ -23,7 +25,7 @@ $(document).ready(function() {
 
 
       $("#guesthostrequestform").hide();
-      $(".results").show();
+      $(".results").fadeIn();
       $("#guesthostrequestform")[0].reset();
 
   });
@@ -31,5 +33,6 @@ $(document).ready(function() {
   $("#clearResult").click(function() {
     $(".results").hide();
     $("#guesthostrequestform").show();
+    $(".pageWrapper").removeClass("invited");
   });
 });

@@ -1,0 +1,40 @@
+.results {
+  h1 {
+    color: $darkgray;
+  }
+}
+
+.invitation {
+  display: flex;
+  justify-content: space-between;
+}
+.invitationFront, .letter {
+  width: 450px;
+  height: 600px;
+  margin: 0 20px;
+  background: $lightgray;
+}
+.invitationFront {
+  padding: 5px;
+  h1 {
+    width: 100%;
+    font-family: 'Cinzel' !important;
+    color: $orange;
+    font-size: 4em;
+    line-height: .85;
+    font-weight: lighter;
+  }
+  p {
+    width: 70%;
+    font-size: 1.2em;
+    color: $blue;
+  }
+  .lead {
+    color: $darkgray;
+    font-size: 1.5em;
+  }
+}
+.letter {
+  font-size: 12px;
+  padding: 5% 5% 5% 5%;
+}

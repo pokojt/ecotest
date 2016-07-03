@@ -2,6 +2,9 @@
 <html>
   <head>
     <!-- <link rel="stylesheet" href="build/css/vendor.css"> -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300|Quicksand:400,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+
     <link rel="stylesheet" href="build/css/main.css">
 
 <!--
@@ -11,8 +14,8 @@
 
   <body>
     <div class="pageWrapper">
-      <img src="media/img/ecotrust_logo_color_web.png" alt="" />
       <form id="guesthostrequestform">
+        <img src="media/img/ecotrust_logo_color_web.png" alt="" />
       <h1>Generate an invitation to the<br /> 2016 Chicken and Egg Food Forum</h1>
           <select class="guestgender" name="guestgender">
             <option value="any">Guest Gender</option>
@@ -72,24 +75,31 @@
 
       <div class="results">
         <div class="invitation">
-          <h1>Your Invitation</h1>
+          <div class="invitationFront">
+            <img src="media/img/ecotrust_logo_icon_gray.png" alt="" />
+            <h1>You're <br />Invited</h1>
+            <p class="lead">On Wednesday, July 20, Ecotrust is hosting the Chicken & Egg Food Forum: Taking steps to scale sustainable meat. </p>
+            <p>I hope you’ll join us.</p>
+          </div>
+          <div class="letter">
             <p>Dear <span id="guestName"></span>,</p>
 
-          <p>On Wednesday, July 20, Ecotrust is hosting the Chicken & Egg Food Forum: Taking steps to scale sustainable meat. I hope you’ll join me.</p>
+            <p>On Wednesday, July 20, Ecotrust is hosting the Chicken & Egg Food Forum: Taking steps to scale sustainable meat. I hope you’ll join us.</p>
 
-          <p>Joining us to discuss these issues will be our panelists, followed by a Q&amp;A. Immediately afterward, we are hosting a social hour, where panelists and attendees can connect and take the conversation into deeper waters.</p>
+            <p>Joining us to discuss these issues will be our panelists, followed by a Q&amp;A. Immediately afterward, we are hosting a social hour, where panelists and attendees can connect and take the conversation into deeper waters.</p>
 
-          <p>Chicken & Egg</p>
-          <p>5:30-8:30, Wednesday, July 20</p>
-          <p> <span id="hostAddress"></span></p>
+            <p>Chicken & Egg</p>
+            <p>5:30-8:30, Wednesday, July 20</p>
+            <p> <span id="hostAddress"></span></p>
 
-          <p>This event is the second in our Food Forums series, where Ecotrust is bringing together engaged food leaders from diverse sectors to dig into important food systems issues. We want to dig into the system changes we need to work toward a healthier food landscape that feeds all eaters, benefits the environment, and improves our economy.</p>
+            <p>This event is the second in our Food Forums series, where Ecotrust is bringing together engaged food leaders from diverse sectors to dig into important food systems issues. We want to dig into the system changes we need to work toward a healthier food landscape that feeds all eaters, benefits the environment, and improves our economy.</p>
 
-          <p>I would love to have you join me.</p>
+            <p>I would love to have you join me.</p>
 
-          <p>Warmly,</p>
-          <p><span id="hostName"></span></p>
-      </div>
+            <p>Warmly,</p>
+            <p><span id="hostName"></span></p>
+          </div>
+        </div>
       <button id="clearResult">New Invitation</button>
       </div>
 
