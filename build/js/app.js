@@ -7,57 +7,22 @@ exports.Invitation = function(guestGender, guestNationality, hostGender, hostNat
 };
 
 
-// exports.Invitation.prototype.getGuest = function() {
-//   $.get("https://randomuser.me/api/?gender='+ this.guestGender+'&nat='+this.guestNationality").then(function(data) {
-//     console.log(data);
-//     var guestFirstName = data.results[0].name.first;
-//     var guestLastName = data.results[0].name.last;
-//
-//     var guestName = guestFirstName + " " + guestLastName;
-//
-//     $("#guestName").text(guestName);
-//     console.log(guestName);
-//     console.log(this.guestGender);
-//   });
-// };
-//
-// exports.Invitation.prototype.getHost = function() {
-//   $.get("https://randomuser.me/api/?gender='+this.hostGender+'&nat='+this.hostNationality").then(function(data) {
-//     console.log(data);
-//     console.log(this.hostGender);
-//
-//     var hostStreet = data.results[0].location.street;
-//     var hostCity =  data.results[0].location.city;
-//     var hostState = data.results[0].location.state;
-//     var hostZip = data.results[0].location.postcode;
-//
-//
-//     var hostFirstName = data.results[0].name.first;
-//     var hostLastName = data.results[0].name.last;
-//
-//     var hostName = hostFirstName + " " +hostLastName;
-//
-//
-//     $("#hostAddress").text(hostStreet + ", " + hostCity + ", " + hostState + " " + hostZip);
-//     $("#hostName").text(hostName);
-//     console.log(hostName);
-//
-//   });
-// };
-
 exports.Invitation.prototype.getGuest = function() {
   $.ajax({
     url: "https://randomuser.me/api/?gender="+this.guestGender+"&nat="+this.guestNationality,
     dataType: 'json',
     success: function(data){
       console.log(data);
+
       var guestFirstName = data.results[0].name.first;
       var guestLastName = data.results[0].name.last;
-
       var guestName = guestFirstName + " " + guestLastName;
+      var formatGuestName = guestName.toLowerCase().replace(/\b[a-z]/g, function(letter){
+        return letter.toUpperCase();
+      });
 
-      $("#guestName").text(guestName);
-      console.log(guestName);
+      $("#guestName").text(formatGuestName);
+      console.log(formatGuestName);
     }
   });
 }
@@ -79,10 +44,13 @@ exports.Invitation.prototype.getHost = function() {
       var hostLastName = data.results[0].name.last;
 
       var hostName = hostFirstName + " " +hostLastName;
+      var formatHostName = hostName.toLowerCase().replace(/\b[a-z]/g, function(letter){
+        return letter.toUpperCase();
+      });
 
       $("#hostAddress").text(hostStreet + ", " + hostCity + ", " + hostState + " " + hostZip);
-      $("#hostName").text(hostName);
-      console.log(hostName);
+      $("#hostName").text(formatHostName);
+      console.log(formatHostName);
     }
   });
 }
