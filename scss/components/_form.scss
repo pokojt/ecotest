@@ -1,0 +1,41 @@
+#guesthostrequestform {
+  padding: 10%;
+  // background: rgba(255,255,255, .7);
+  text-align: center;
+  select {
+    letter-spacing:1px;
+    background: $green;
+    color: $white;
+    opacity: .8;
+    border: none;
+    height: 30px;
+    width: 300px;
+    margin: 5px;
+    font-size: .9em;
+    text-transform: lowercase;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+button {
+  letter-spacing: 2px;
+  height: 35px;
+  font-size: .9em;
+  margin: 10px;
+  border-radius: 5px;
+  opacity: .9;
+  width: 150px;
+  text-transform: lowercase;
+  background: $darkgray;
+  border: none;
+  color: white;
+  padding: 8px 20px 10px 20px;
+  &:hover {
+    cursor: pointer;
+    background: $yellow;
+  }
+  &:focus {
+    outline:none;
+  }
+}

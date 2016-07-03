@@ -17,7 +17,7 @@ exports.Invitation.prototype.getGuest = function() {
       var guestFirstName = data.results[0].name.first;
       var guestLastName = data.results[0].name.last;
       var guestName = guestFirstName + " " + guestLastName;
-      var formatGuestName = guestName.toLowerCase().replace(/\b[a-z]/g, function(letter){
+      var formatGuestName = guestName.toLowerCase().replace(/\b[a-z]/g, function(letter) {
         return letter.toUpperCase();
       });
 
