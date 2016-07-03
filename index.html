@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- <link rel="stylesheet" href="build/css/vendor.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300|Quicksand:400,300' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-
     <link rel="stylesheet" href="build/css/main.css">
-
-<!--
-    <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8"> -->
   </head>
-
-
   <body>
     <div class="pageWrapper">
       <form id="guesthostrequestform">
@@ -82,27 +75,27 @@
           </div>
           <div class="letter">
             <img src="media/img/ecotrust_logo_icon_green.png" alt="" />
-            <p>Dear <span id="guestName"></span>,</p>
+            <p class="dear">Dear <span id="guestName"></span>,</p>
 
             <p>On Wednesday, July 20, Ecotrust is hosting the Chicken & Egg Food Forum: Taking steps to scale sustainable meat. I hope you’ll join us.</p>
 
             <p>Joining us to discuss these issues will be our panelists, followed by a Q&amp;A. Immediately afterward, we are hosting a social hour, where panelists and attendees can connect and take the conversation into deeper waters.</p>
-            <p class="details">t h e  d e t a i l s</p>
-            <p>chicken &amp; egg food forum</p>
-            5:30-8:30, Wednesday, July 20</p>
-            <p><span id="hostAddress"></span></p>
-
+            <div class="details">
+              <p class="blue">t h e  d e t a i l s</p>
+              <p>chicken &amp; egg food forum</p>
+              <p>5:30-8:30, wednesday, july 20</p>
+              <p><span id="hostAddress"></span></p>
+            </div>
             <p>This event is the second in our Food Forums series, where Ecotrust is bringing together engaged food leaders from diverse sectors to dig into important food systems issues. We want to dig into the system changes we need to work toward a healthier food landscape that feeds all eaters, benefits the environment, and improves our economy.</p>
 
             <p>I would love to have you join me.</p>
 
-            <p>Warmly,</p>
+            <p class="warm">Warmly,</p>
             <p><span id="hostName"></span></p>
           </div>
         </div>
       <button id="clearResult">New Invitation</button>
       </div>
-
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

@@ -1,17 +1,15 @@
 
-
+.results {
+  @include flexbox($direction: column, $justify: center, $align: center);
+}
 .invitation {
-  display: flex;
-  justify-content: space-between;
+  @include flexbox($justify: space-between, $align: center, $wrap: wrap);
 }
 .invitationFront, .letter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flexbox($direction: column, $justify: center, $align:center);
   width: 450px;
   height: 600px;
-  margin: 0 20px;
+  margin: 10px 20px;
   background: $lightgray;
 }
 .invitationFront {
@@ -36,9 +34,26 @@
   }
 }
 .letter {
-  font-size: 12px;
+  font-size: 13px;
   padding: 5% 5% 5% 5%;
-  .details {
+  img {
+    margin-bottom: 10px;
+  }
+  .blue {
     color: $blue;
+  }
+  .details {
+    font-color: $black;
+  }
+  .warm {
+    color: $orange;
+  }
+}
+
+#clearResult {
+  background: $green;
+  &:hover {
+    background: $white;
+    color: $orange;
   }
 }
